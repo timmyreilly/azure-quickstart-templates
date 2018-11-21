@@ -50,7 +50,7 @@
             "name": "[concat(parameters('storageName'), '/Microsoft.EventGrid/', parameters('eventSubName'))]",
             "apiVersion": "2018-01-01",
             "dependsOn": [
-                "[parameters('storageName')]"
+                "[resourceId('Microsoft.Storage/storageAccount', parameters('storageName')]"
             ],
             "properties": {
                 "destination": {
